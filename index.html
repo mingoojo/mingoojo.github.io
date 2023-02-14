@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: #f4f7fc;
+            height: 200vh;
+
+        }
+        .header{
+            /* position: fixed; */
+            background-color: white;
+            width: 92vw;
+            height: 4.5rem;
+            margin: 0px 4vw;
+            border-radius: 0px 0px 15px 15px;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 0px 20px 10px #cad8f0;
+            
+        }
+        .test {
+            /* align-items: ; */
+            display: inline-block;
+            flex: 1 1 auto;
+        }
+        .logo{
+            /* border: 2px solid #222; */
+            background-image: url(images/icon/main-logo-01.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 3rem;
+            width: 3rem;
+            flex: 0 0 auto;
+            margin-left: 2rem;
+            z-index: 10;
+        }
+        .menu-bar{
+            text-align: center;
+            transition: all 0.5s;
+        }
+        .menu-bar-contents{
+            display: inline;
+            margin: 0 1rem;
+            /* border: 2px solid #222; */
+        }
+        .menu-bar-btn{
+            background-color: rgb(71, 71, 216);
+            color: white;
+            z-index: 10;
+
+        }
+        .btn-cover{
+            margin-right: 2rem;
+            flex: 0 0 auto;
+            /* border: 2px solid #222; */
+        }
+        .aniani{
+            animation: menu-ani 1s forwards;
+            /* display: none; */
+        }
+        .hidden{
+            display: none;
+            /* opacity: 0; */
+        }
+        .menu-hidden-forwards{
+            display: none;
+            font-size: 0.5rem;
+            position: absolute;
+            /* border: 2px solid #222; */
+            left: 12vw;
+            right: 12vw;
+            margin: auto;
+            text-align: center;
+            opacity: 0;
+            transition: all 1s;
+            /* top: -2rem; */
+        }
+        .show{
+            display: block;
+            font-size: 1rem;
+            opacity: 1;
+            /* top: none; */
+        }
+        .menu-bar-contents1{
+            display: block;
+            padding: 0.5rem;
+        }
+
+        @keyframes menu-ani{
+            0%{
+                width: 92vw;
+                height: 4.5rem;
+
+            }
+            100%{
+                width: 60vw;
+                height: 20rem;
+                margin: 0px 20vw;
+
+
+            }
+
+        }
+        .main{
+            padding-top: 6rem;
+            border: 2px solid #222;
+            height: 70vh;
+        }
+        .main2{
+            padding-top: 6rem;
+            border: 2px solid #222;
+            float: left;
+            width: 40vw;
+            height: 55vh;
+            text-align: end;
+            padding-right: 2rem;
+        }
+        .photo{
+            border: 2px solid #222;
+            float: right;
+            width: 55vw;
+            height: 55vh;
+            padding-left: 2rem;
+            background-color: aqua;
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="header">
+        <div class="test logo">
+            <!-- <img src="images/icon/main-logo-01.png" alt="logo"> -->
+        </div>
+        <div class="menu-bar test" id="bar-hidden">
+            <li class="menu-bar-contents">
+                <a href="#">Home</a>
+            </li>
+            <li class="menu-bar-contents">
+                <a href="#">Resume</a>
+            </li>
+            <li class="menu-bar-contents">
+                <a href="#">Project</a>
+            </li>
+            <li class="menu-bar-contents">
+                <a href="#">Github</a>
+            </li>
+            <li class="menu-bar-contents">
+                <a href="#">Coding Journal</a>
+            </li>
+        </div>
+        <div class="test btn-cover">
+            <button class="menu-bar-btn btn" type="button">About us</button>
+        </div>
+        <div class="menu-hidden-forwards"> Github : mingoojo.github.io <br><br> E-mail : swyks112@gmail.com <br><br> Phone : (+82)10-9523-6696
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="main2">
+            <h2>Who is Me</h2>
+            <ul>이름 : 조민구</ul>
+            <ul></ul>
+            <ul>조민구</ul>
+            <ul>조민구</ul>
+        </div>
+        <aside class="photo"></aside>
+    </div>
+
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector('.btn-cover').addEventListener('click', ()=>{
+            document.querySelector('.header').classList.toggle('aniani');
+            document.querySelector('.menu-bar').classList.toggle('hidden');
+            document.querySelector('.menu-hidden-forwards').classList.toggle('show');
+        })
+
+    </script>
+</body>
+</html>
