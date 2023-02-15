@@ -15,10 +15,9 @@
 
         }
         .header{
-            /* position: fixed; */
             background-color: white;
             width: 92vw;
-            height: 4.5rem;
+            height: 3.5rem;
             margin: 0px 4vw;
             border-radius: 0px 0px 15px 15px;
             position: fixed;
@@ -26,15 +25,10 @@
             align-items: center;
             justify-content: space-between;
             box-shadow: 0px 0px 20px 10px #cad8f0;
-            
+            transition: all 0.3s;   
         }
-        .test {
-            /* align-items: ; */
-            display: inline-block;
-            flex: 1 1 auto;
-        }
+
         .logo{
-            /* border: 2px solid #222; */
             background-image: url(images/icon/main-logo-01.png);
             background-position: center;
             background-repeat: no-repeat;
@@ -43,11 +37,33 @@
             width: 3rem;
             flex: 0 0 auto;
             margin-left: 2rem;
-            z-index: 10;
         }
-        .menu-bar{
+
+
+        .test {
+            display: inline-block;
+            flex: 1 1 auto;
+        }
+        .menu-bar1{
             text-align: center;
-            transition: all 0.5s;
+            /* transform: translateY(-50%); */
+            opacity: 0;
+            display: none;
+            /* border: 2px solid #222; */
+        }
+        .menu-bar2{
+            text-align: center;
+            /* transform: translateY(-50%); */
+            opacity: 0;
+            display: none;
+            /* border: 2px solid #222; */
+        }
+        .menu-bar3{
+            text-align: center;
+            /* transform: translateY(-50%); */
+            opacity: 0;
+            display: none;
+            /* border: 2px solid #222; */
         }
         .menu-bar-contents{
             display: inline;
@@ -56,8 +72,6 @@
         }
         .menu-bar-btn{
             background-color: rgb(71, 71, 216);
-            color: white;
-            z-index: 10;
 
         }
         .btn-cover{
@@ -65,118 +79,186 @@
             flex: 0 0 auto;
             /* border: 2px solid #222; */
         }
-        .aniani{
-            animation: menu-ani 1s forwards;
-            /* display: none; */
-        }
-        .hidden{
-            display: none;
-            /* opacity: 0; */
-        }
-        .menu-hidden-forwards{
-            display: none;
-            font-size: 0.5rem;
-            position: absolute;
-            /* border: 2px solid #222; */
-            left: 12vw;
-            right: 12vw;
-            margin: auto;
-            text-align: center;
-            opacity: 0;
-            transition: all 1s;
-            /* top: -2rem; */
-        }
-        .show{
-            display: block;
-            font-size: 1rem;
+
+        .showen{
+            transform: translateY(0%);
             opacity: 1;
-            /* top: none; */
-        }
-        .menu-bar-contents1{
             display: block;
-            padding: 0.5rem;
+            animation: ani-test 0.35s forwards;
+        }
+        .showen2{
+            transform: translateY(0%);
+            opacity: 1;
+            display: block;
+            animation: ani-test2 0.35s forwards;
         }
 
-        @keyframes menu-ani{
+        @keyframes ani-test {
             0%{
-                width: 92vw;
-                height: 4.5rem;
-
+                transform: translateX(-5%);
+                opacity: 0;
             }
             100%{
-                width: 60vw;
-                height: 20rem;
-                margin: 0px 20vw;
-
-
+                transform: translateY(0%);
+                opacity: 1;
             }
+        }
 
+        @keyframes ani-test2 {
+            0%{
+                transform: translateX(5%);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0%);
+                opacity: 1;
+            }
         }
-        .main{
-            padding-top: 6rem;
-            border: 2px solid #222;
-            height: 70vh;
+        .butn{
+            position: absolute;
+            z-index: 110;
+            /* background-color: beige; */
+            /* border: 2px solid #222; */
+            width : 3rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2rem;
+            cursor: pointer;
+            
         }
-        .main2{
-            padding-top: 6rem;
-            border: 2px solid #222;
-            float: left;
-            width: 40vw;
-            height: 55vh;
-            text-align: end;
-            padding-right: 2rem;
+        .butn1{
+            /* top: -0.3rem; */
+            transform: translate(68vw, 0px); 
+            /* transform: translateY(1rem); */
         }
-        .photo{
-            border: 2px solid #222;
-            float: right;
-            width: 55vw;
-            height: 55vh;
-            padding-left: 2rem;
-            background-color: aqua;
 
+        .butn2{
+            /* top: -0.3rem; */
+            transform: translate(22.5vw, 0px);
+            /* transform: translateY(1rem); */
         }
+
+        .menu-btn-event{
+            background-color: aquamarine;
+            display: block; 
+            background-color: aquamarine;
+            transform: translate(-90%, 0%); 
+            position: absolute; 
+            width: 0px; 
+            height: 0px;
+            transition: all 0.35s;
+            
+            
+        }
+        input[id="chkbox"]:checked + label + div{
+            background-color: bisque;
+            width: 300px; 
+            height: 300px;
+            border-radius: 10px;
+       }
+
+       input[id="chkbox"] + label{
+        display: block;
+        width: 20px;
+        height: 17px;
+        position: relative;
+        cursor: pointer;
+       }
+       input[id="chkbox"] + label span{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 100px;
+        background-color: rgb(67, 67, 67);
+        transition: all 0.35s;
+        
+       }
+
+       input[id="chkbox"] + label span:nth-child(1){top: 0;}
+       input[id="chkbox"] + label span:nth-child(2){top: 50%; transform: translateY(-50%);}
+       input[id="chkbox"] + label span:nth-child(3){bottom: 0;}
+       input[id="chkbox"]:checked + label span:nth-child(1){top: 50%; transform: translateY(-50%) rotate(45deg);}
+       input[id="chkbox"]:checked + label span:nth-child(2){opacity: 0;}
+       input[id="chkbox"]:checked + label span:nth-child(3){bottom: 50% ;transform: translateY(50%) rotate(-45deg);}
     </style>
 </head>
 <body>
     <nav class="header">
-        <div class="test logo">
-            <!-- <img src="images/icon/main-logo-01.png" alt="logo"> -->
+        <div class="logo"></div>
+
+
+        <div class="test">
+            <div class="test menu-bar1 showen" style="transition: all 0.2s">
+                <li class="menu-bar-contents">
+                    <a href="#">Home</a>
+                </li>
+                <li class="menu-bar-contents">
+                    <a href="#">Resume</a>
+                </li>
+                <li class="menu-bar-contents">
+                    <a href="#">Project</a>
+                </li>
+                <li class="menu-bar-contents">
+                    <a href="#">Github</a>
+                </li>
+                <li class="menu-bar-contents">
+                    <a href="#">Coding Journal</a>
+                </li>
+            </div>
+            <div class="test menu-bar2" style="transition: all 0.2s">
+                <li class="menu-bar-contents">
+                    <a href="#">Git</a>
+                </li>
+                <li class="menu-bar-contents">
+                    <a href="#">SNS</a>
+                </li>
+                <li class="menu-bar-contents">
+                    <a href="#">E-mail</a>
+                </li>
+                <!-- <li class="menu-bar-contents">
+                    <a href="#">Github</a>
+                </li>
+                <li class="menu-bar-contents">
+                    <a href="#">Coding Journal</a>
+                </li> -->
+            </div>
+            <div class="test menu-bar3" style="transition: all 0.2s">
+                <li class="menu-bar-contents">
+                    <a href="#">Copy@right</a>
+                </li>
+                <!-- <li class="menu-bar-contents">
+                    <a href="#">Resume</a>
+                </li>
+                <li class="menu-bar-contents">
+                    <a href="#">Project</a>
+                </li>
+                <li class="menu-bar-contents">
+                    <a href="#">Github</a>
+                </li>
+                <li class="menu-bar-contents">
+                    <a href="#">Coding Journal</a>
+                </li> -->
+            </div>
         </div>
-        <div class="menu-bar test" id="bar-hidden">
-            <li class="menu-bar-contents">
-                <a href="#">Home</a>
-            </li>
-            <li class="menu-bar-contents">
-                <a href="#">Resume</a>
-            </li>
-            <li class="menu-bar-contents">
-                <a href="#">Project</a>
-            </li>
-            <li class="menu-bar-contents">
-                <a href="#">Github</a>
-            </li>
-            <li class="menu-bar-contents">
-                <a href="#">Coding Journal</a>
-            </li>
-        </div>
+
         <div class="test btn-cover">
-            <button class="menu-bar-btn btn" type="button">About us</button>
-        </div>
-        <div class="menu-hidden-forwards"> Github : mingoojo.github.io <br><br> E-mail : swyks112@gmail.com <br><br> Phone : (+82)10-9523-6696
-        </div>
+            <div class="menu-btn">
+                <div class="menu-btn-all">
+                    <input type="checkbox" id="chkbox" style="display: none;">
+                    <label for="chkbox" class="btn-main">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="menu-btn-event">
+                    </div> 
+                </div> 
+            </div>
+        </div>            
+            <div class="butn2 butn"> « </div>
+            <div class="butn1 butn"> » </div>
     </nav>
-
-    <div class="main">
-        <div class="main2">
-            <h2>Who is Me</h2>
-            <ul>이름 : 조민구</ul>
-            <ul></ul>
-            <ul>조민구</ul>
-            <ul>조민구</ul>
-        </div>
-        <aside class="photo"></aside>
-    </div>
-
     
     
     
@@ -184,12 +266,73 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script>
-        document.querySelector('.btn-cover').addEventListener('click', ()=>{
-            document.querySelector('.header').classList.toggle('aniani');
-            document.querySelector('.menu-bar').classList.toggle('hidden');
-            document.querySelector('.menu-hidden-forwards').classList.toggle('show');
+
+        let foo2 = [];
+
+        window.addEventListener('scroll', function(){
+            foo2.unshift(window.scrollY);
+
+            if(foo2[0]>foo2[1]){
+                document.querySelector('.header').style.top = '-20rem'
+            } else if (foo2[0]<foo2[1]){
+                document.querySelector('.header').style.top = '0rem'
+            }
         })
 
+        var foo = 0;
+
+        document.querySelector('.butn1').addEventListener('click', ()=>{
+            foo +=1;
+            console.log(foo)
+            if(foo%3 == 0){
+            document.querySelector('.menu-bar1').classList.add('showen2');
+            document.querySelector('.menu-bar1').classList.remove('showen');
+            document.querySelector('.menu-bar2').classList.remove('showen2');
+            document.querySelector('.menu-bar2').classList.remove('showen');
+            document.querySelector('.menu-bar3').classList.remove('showen2');
+            document.querySelector('.menu-bar3').classList.remove('showen');
+        } else if (foo%3 == 1 || foo%3 == -1){
+            document.querySelector('.menu-bar1').classList.remove('showen2');
+            document.querySelector('.menu-bar1').classList.remove('showen');
+            document.querySelector('.menu-bar2').classList.remove('showen');
+            document.querySelector('.menu-bar2').classList.add('showen2');
+            document.querySelector('.menu-bar3').classList.remove('showen2');
+            document.querySelector('.menu-bar3').classList.remove('showen');
+        } else if (foo%3 == 2 || foo%3 == -2){
+            document.querySelector('.menu-bar1').classList.remove('showen2');
+            document.querySelector('.menu-bar1').classList.remove('showen');
+            document.querySelector('.menu-bar2').classList.remove('showen2');
+            document.querySelector('.menu-bar2').classList.remove('showen');
+            document.querySelector('.menu-bar3').classList.remove('showen');
+            document.querySelector('.menu-bar3').classList.add('showen2');
+        }
+        })
+        document.querySelector('.butn2').addEventListener('click', ()=>{
+            foo -=1;
+            console.log(foo)
+            if(foo%3 == 0){
+            document.querySelector('.menu-bar1').classList.add('showen');
+            document.querySelector('.menu-bar1').classList.remove('showen2');
+            document.querySelector('.menu-bar2').classList.remove('showen2');
+            document.querySelector('.menu-bar2').classList.remove('showen');
+            document.querySelector('.menu-bar3').classList.remove('showen2');
+            document.querySelector('.menu-bar3').classList.remove('showen');
+        } else if (foo%3 == 1 || foo%3 == -1){
+            document.querySelector('.menu-bar1').classList.remove('showen');
+            document.querySelector('.menu-bar1').classList.remove('showen2');
+            document.querySelector('.menu-bar2').classList.add('showen');
+            document.querySelector('.menu-bar2').classList.remove('showen2');
+            document.querySelector('.menu-bar3').classList.remove('showen');
+            document.querySelector('.menu-bar3').classList.remove('showen2');
+        } else if (foo%3 == 2 || foo%3 == -2){
+            document.querySelector('.menu-bar1').classList.remove('showen');
+            document.querySelector('.menu-bar1').classList.remove('showen2');
+            document.querySelector('.menu-bar2').classList.remove('showen');
+            document.querySelector('.menu-bar2').classList.remove('showen2');
+            document.querySelector('.menu-bar3').classList.remove('showen2');
+            document.querySelector('.menu-bar3').classList.add('showen');
+        }
+        })
     </script>
 </body>
 </html>
