@@ -1,0 +1,161 @@
+html{
+    font-family: 'Roboto', sans-serif;
+}
+body{background-color: #f4f7fc; height: 200vh;}
+
+.header{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    width: 92vw;
+    height: 3.5rem;
+    margin: 0px 4vw;
+    border-radius: 0px 0px 15px 15px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 0px 20px 10px #dadde4;
+    transition: all 0.3s;   
+}
+
+.logo{
+    background-image: url(images/icon/main-logo-ver2-01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 3rem;
+    width: 3rem;
+    flex: 0 0 auto;
+    margin-left: 2rem;
+    /* border: 2px solid #222; */
+}
+
+.test {display: inline-block; flex: 1 1 auto; font-size:0.9rem;}
+.menu-bar1{text-align: center;opacity: 0;display: none;}
+.menu-bar2{text-align: center;opacity: 0;display: none;}
+.menu-bar3{text-align: center;opacity: 0;display: none;}
+.menu-bar-contents{display: inline;margin: 0 1rem;}
+.showen{transform: translateY(0%);opacity: 1;display: block;animation: ani-test 0.35s forwards;}
+.showen2{transform: translateY(0%);opacity: 1;display: block;animation: ani-test2 0.35s forwards;}
+.menu-cont-item{color: #222;}
+.logo-box{ width: 30px; height: 30px; display: inline;}
+.logo-box1{ padding: .3rem 1.2rem; background-image: url(images/icon/phone\ logo.png); background-repeat: no-repeat; background-position: center; background-size: contain;}
+.logo-box2{ padding: .3rem 1.2rem; background-image: url(images/icon/mail\ logo.png); background-repeat: no-repeat; background-position: center; background-size: contain;}
+/* .menu-cont-item:hover{font-weight: bold;} */
+
+
+@keyframes ani-test {
+    0%{
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes ani-test2 {
+    0%{
+        transform: translateX(5%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.menu-btn-event{
+    background-color: #ffffff;
+    display: block; 
+    /* background-color: aquamarine; */
+    transform: translate(-90%, 0%); 
+    position: absolute; 
+    width: 0px; 
+    height: 0px;
+    transition: all 0.1s;
+}
+
+input[id="chkbox"]:checked + label + div{
+    background-color: #ffffff;
+    width: 250px; 
+    height: 70px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 1px #dadde4;
+    padding: 1.3rem;
+}
+
+input[id="chkbox"] + label{
+    display: block;
+    width: 20px;
+    height: 17px;
+    position: relative;
+    cursor: pointer;
+}
+input[id="chkbox"] + label span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 100px;
+    background-color: rgb(67, 67, 67);
+    transition: all 0.35s;
+    
+}
+input[id="chkbox"] + label span:nth-child(1){top: 0;}
+input[id="chkbox"] + label span:nth-child(2){top: 50%; transform: translateY(-50%);}
+input[id="chkbox"] + label span:nth-child(3){bottom: 0;}
+input[id="chkbox"]:checked + label span:nth-child(1){top: 50%; transform: translateY(-50%) rotate(45deg);}
+input[id="chkbox"]:checked + label span:nth-child(2){opacity: 0;}
+input[id="chkbox"]:checked + label span:nth-child(3){bottom: 50% ;transform: translateY(50%) rotate(-45deg);}
+
+.btn-cover{margin-right: 2rem;flex: 0 0 auto;}
+.butn{position: absolute;z-index: 110;width : 3rem;text-align: center;font-weight: bold;font-size: 2rem;cursor: pointer;}
+.butn1{transform: translate(68vw, -3.5px); }
+.butn2{transform: translate(22.5vw, -3.5px);}
+
+
+.darkmode-btn{
+    width: 3rem;
+    height: 1.5rem;
+    /* border: 2px solid #222; */
+    border-radius: 15px;
+    background-color: #cad9f3;
+    transition: all 0.15s;
+    box-shadow: inset 4px 4px 4px #7f8897;;
+}
+input[id="darkmode"] + label span{
+    position: absolute;
+    background-color: rgb(238, 238, 238);
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 20px;
+    margin: 1.6px;
+    transition: all 0.15s;
+    /* transform: translateY(-50%); */
+}
+
+input[id="darkmode"]:checked + label span{
+    position: absolute;
+    background-color: rgb(207, 207, 207);
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 20px;
+    margin: 1.6px;
+    transform: translateX(1.5rem);
+    /* transform: translateY(-50%); */
+}
+input[id="darkmode"]:checked + label {
+    background-color: #7c8ba5;
+    box-shadow: inset 4px 4px 4px #606774;;
+}
+.change-mode{
+    opacity: 0;
+    display: flex;
+    white-space: nowrap;
+    /* align-items: center; */
+    /* border: 2px solid #222; */
+}
