@@ -17,7 +17,7 @@
             width: 720px;
             /* height: 200vh; */
             /* background-color: aqua; */
-            border: 2px solid #222;
+            /* border: 2px solid #222; */
             left: 0;
             right: 0;
             margin: auto;
@@ -32,7 +32,6 @@
         .res-header{
             height: 350px;
             width: 656px;
-            /* border: 2px solid #222; */
         }
         .name{
             font-weight: bold;
@@ -43,7 +42,7 @@
             display: flex;
             align-items: flex-end;
             padding-bottom: 2rem;
-            border-bottom: 1px solid #222;
+            /* border-bottom: 1px solid #222; */
         }
         .thum-photo{
             flex: 1 1 auto;
@@ -58,7 +57,8 @@
         .thum-desc{
             flex: 1 1 auto;
             width: 300px;
-            border: 2px solid #222;
+            padding-left: 2rem;
+            /* border: 2px solid #222; */
         }
 
         .res{
@@ -71,12 +71,56 @@
         }
 
         .sns0{
-            background-color: aqua;
+            /* background-color: aqua; */
             width: 40px;
             height: 40px;
-            padding: 1rem;
-            border: 2px solid #222;
+            padding: 0px 1.4rem;
+            /* border: 2px solid #222; */
         }
+        .sns1{
+            background-image: url(images/icon/sns1-01.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .sns2{
+            background-image: url(images/icon/sns1-02.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .sns3{
+            background-image: url(images/icon/sns1-03.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .sns4{
+            background-image: url(images/icon/sns1-04.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .skill-item{
+            padding: 0.5rem;
+            background-color: rgb(224, 224, 224);
+            border-radius: 5px;
+            line-height: 3rem;
+            /* color: white; */
+        }
+        .skill-item:nth-child(1){background-color: aquamarine;}
+        .skill-item:nth-child(2){background-color: aqua;}
+        .skill-item:nth-child(3){background-color: rgba(0, 255, 191, 0.486);}
+        .skill-item:nth-child(4){background-color: rgb(148, 255, 127);}
+        .skill-item:nth-child(5){background-color: rgb(255, 236, 127);}
+        .skill-item:nth-child(6){background-color: rgb(255, 127, 133);}
+        .skill-item:nth-child(7){background-color: rgb(251, 127, 255);}
+        .skill-item:nth-child(8){background-color: rgb(129, 127, 255);}
+        .skill-item:nth-child(9){background-color: rgb(232, 255, 127);}
+        .skill-item:nth-child(10){background-color: rgb(255, 142, 127);}
+        .skill-item:nth-child(11){background-color: rgb(240, 127, 255);}
+        .skill-item:nth-child(12){background-color: rgb(255, 127, 144);}
 
     </style>
 </head>
@@ -167,22 +211,22 @@
     <div class="page">
         <div class="res-header-margin"></div>
         <div class="res-header">
-            <h1 class="name"> 조민구 | Resume</h1>
+            <h1 class="name"> 조민구 || Resume</h1>
             <div class="res-header-main">
                 <aside class="thum-photo thum"></aside>
                 <aside class="thum-desc thum">
                     <ul>
-                        <h4 style="padding-bottom: 1rem;">Jo Min-Goo</h4>
-                        <h6 style="font-weight: bold;">Developer || Front-end</h6>
-                        <h6 style="font-weight: bold;">Designer  || Web, Package, Graphic</h6>
+                        <h4 style="padding-bottom: 1rem; border-bottom: 1px solid #222; font-weight: bold;">Jo Min-Goo</h4>
+                        <h5 style="display: inline; font-weight: 700;">Developer  <h6 style="display: inline; font-size: 0.9rem; font-weight: bold; color: rgb(15, 7, 87);">|| Front-end / Back-end</h6> </h5> <br>
+                        <h5 style="display: inline; font-weight: 700;">Designer  <h6 style="display: inline; font-size: 0.9rem; font-weight: bold; color: rgb(15, 7, 87);">|| Web / Package / Graphic</h6> </h5>
                     </ul>
                     <ul>
-                        <h4>SNS</h4>
+                        <h5 style="font-weight: 700; ">SNS</h5>
                         <div class="sns-mark">
-                            <span class="sns0"></span>
-                            <span class="sns0"></span>
-                            <span class="sns0"></span>
-                            <span class="sns0"></span>
+                            <a href="" style="font-size: 2rem;"><span class="sns0 sns1"></span></a>
+                            <a href="" style="font-size: 2rem;"><span class="sns0 sns2"></span></a>
+                            <a href="" style="font-size: 2rem;"><span class="sns0 sns3"></span></a>
+                            <a href="" style="font-size: 2rem;"><span class="sns0 sns4"></span></a>
                         </div>
                     </ul>
                 </aside>
@@ -195,7 +239,10 @@
         </div>
         <div class="res-career res">
             <h3>Career</h3>
-            <p>학습에서 즐거움을 찾는 개발자 조민구입니다. <br><br>Lorem ipsum dolor sit amet, consectetu
+            <div class="career-main">
+                <aside class="career-list"></aside>
+                <aside class="career-desc"></aside>
+            </div>
         </div>
         <div class="res-header res">
             <h3>Experience</h3>
@@ -203,15 +250,36 @@
         </div>
         <div class="res-header res">
             <h3>Skill</h3>
-            <p>학습에서 즐거움을 찾는 개발자 조민구입니다. <br><br>Lorem ipsum dolor sit amet, consectetu
+            <div class="skill-box">
+                <span class="skill-item">Javascript</span>
+                <span class="skill-item">Typescript</span>
+                <span class="skill-item">React</span>
+                <span class="skill-item">Vue</span> <br>
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">NodeJS</span>
+                <span class="skill-item">Express</span>
+                <span class="skill-item">MongoDB</span> <br>
+                <span class="skill-item">Photoshop</span>
+                <span class="skill-item">Illustration</span>
+                <span class="skill-item">Adobe XD</span>
+            </div>
         </div>
-        <div class="res-header res">
+        <div class="res-edu res">
             <h3>Education</h3>
-            <p>학습에서 즐거움을 찾는 개발자 조민구입니다. <br><br>Lorem ipsum dolor sit amet, consectetu
+            <h6>가천대학교</h6>
+            <p style="color: rgb(143, 143, 143);">2013.03~2019.08 졸업</p> <p>패션디자인 학사</p>
         </div>
-        <div class="res-header res">
+        <div class="res-oexp res">
             <h3>Other-Experience</h3>
-            <p>학습에서 즐거움을 찾는 개발자 조민구입니다. <br><br>Lorem ipsum dolor sit amet, consectetu
+            <div>
+                <h6>미국 괌대학 어학연수</h6>
+                <p style="color: rgb(143, 143, 143);">2019.01~2019.01</p>
+            </div>
+            <div>
+                <h6>미국 LA 현지 회사 취업</h6>
+                <p style="color: rgb(143, 143, 143);">2020.03~2020.12(코로나로 인한 귀국)</p>
+            </div>
         </div>
 
     </div>
