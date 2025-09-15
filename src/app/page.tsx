@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       <div>
-        클라이언트 사이드 렌더링 되는곳
+        클라이언트 사이드 렌더링 되는곳 123123
         <PrivateRouter
           component={
             <CsrWrapper>
