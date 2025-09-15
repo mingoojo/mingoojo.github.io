@@ -8,11 +8,11 @@ if (process.env.NEXT_PUBLIC_ENV === "dev") {
   url = process.env.NEXT_PUBLIC_LOCAL_URL || ""
 }
 
-const googleUrl = "https://maps.googleapis.com/maps/api/geocode"
 
 const nextConfig = {
   reactStrictMode: false,
   output: "export",
+  images: { unoptimized: true },
   // async rewrites() {
   //   return [
   //     {
